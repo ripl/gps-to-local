@@ -15,7 +15,7 @@
 #include <hr_common/nmea.h>
 
 
-#include <lcmtypes/erlcm_nmea_t.h>
+#include <lcmtypes/nmea_t.h>
 #include <lcmtypes/hr_lcmtypes.h>
 
 // Used if we are publishing the pose
@@ -56,7 +56,7 @@ typedef struct _state_t {
 
 static void
 on_nmea (const lcm_recv_buf_t *rbuf, const char *channel,
-         const erlcm_nmea_t *nmea, void *user )
+         const nmea_t *nmea, void *user )
 {
     state_t *self = (state_t *) user;
 
@@ -166,7 +166,7 @@ main (int argc, char ** argv)
         return -1;
     }
 
-    erlcm_nmea_t_subscribe( self->lcm, "NMEA", on_nmea, self);
+    nmea_t_subscribe( self->lcm, "NMEA", on_nmea, self);
 
     /* Main Loop */
     self->mainloop = g_main_loop_new(NULL, FALSE);
