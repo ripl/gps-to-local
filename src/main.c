@@ -43,7 +43,7 @@ typedef struct _state_t {
 
     BotTrans gps_to_body_trans;
 
-    erlcm_gps_to_local_t gps_to_local;
+    ripl_gps_to_local_t gps_to_local;
     bot_core_pose_t pose;
 
     int verbose;
@@ -84,7 +84,7 @@ on_nmea (const lcm_recv_buf_t *rbuf, const char *channel,
      self->gps_to_local.local[1] = pose->trans_vec[1];
      self->gps_to_local.local[2] = pose->trans_vec[2];
 
-     erlcm_gps_to_local_t_publish (self->lcm, "GPS_TO_LOCAL", &self->gps_to_local);
+     ripl_gps_to_local_t_publish (self->lcm, "GPS_TO_LOCAL", &self->gps_to_local);
 
    }
 
