@@ -12,7 +12,7 @@
 #include <bot_param/param_client.h>
 #include <bot_frames/bot_frames.h>
 
-#include <hr_common/nmea.h>
+#include <common_utils/nmea.h>
 
 
 #include <lcmtypes/senlcm_nmea_t.h>
