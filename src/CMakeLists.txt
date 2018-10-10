@@ -17,7 +17,7 @@ pods_use_pkg_config_packages(gps-to-local
     glib-2.0
     lcm
     bot2-core
-    lcmtypes_hr-lcmtypes
+    lcmtypes_ripl-general
     lcmtypes-gps18
     bot2-param-client
     bot2-frames

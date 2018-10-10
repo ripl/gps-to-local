@@ -16,7 +16,7 @@
 
 
 #include <lcmtypes/senlcm_nmea_t.h>
-#include <lcmtypes/hr_lcmtypes.h>
+#include <lcmtypes/ripl_general_lcmtypes.h>
 
 // Used if we are publishing the pose
 #define PUBLISH_GLOBAL_TO_LOCAL_HZ 10.0
